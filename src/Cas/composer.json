@@ -1,0 +1,23 @@
+{
+    "name": "laravel-xjtuana/cas",
+    "description": "XJTU CAS package for Laravel",
+    "keywords": ["xjtu", "xjtuana", "laravel", "cas"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Meteor.lxy",
+            "email": "meteor.lxy@foxmail.com"
+        }
+    ],
+    "require": {
+        "illuminate/contracts": "5.4.*",
+        "illuminate/auth": "5.4.*",
+        "illuminate/database": "5.4.*",
+        "guzzlehttp/guzzle": "^6.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Xjtuana\\Cas\\": ""
+        }
+    },
+}

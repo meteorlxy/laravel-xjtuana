@@ -1,0 +1,21 @@
+{
+    "name": "laravel-xjtuana/webservice",
+    "description": "XJTU webservice package for Laravel",
+    "keywords": ["xjtu", "xjtuana", "laravel", "soap"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Meteor.lxy",
+            "email": "meteor.lxy@foxmail.com"
+        }
+    ],
+    "require": {
+        "ext-soap": "*",
+        "illuminate/support": "5.4.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Xjtuana\\Ws\\": ""
+        }
+    }
+}

@@ -1,0 +1,29 @@
+{
+    "name": "xjtuana/laravel-xjtuana",
+    "description": "XJTUANA development package for Laravel",
+    "keywords": ["xjtu", "xjtuana", "laravel"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Meteor.lxy",
+            "email": "meteor.lxy@foxmail.com"
+        }
+    ],
+    "require": {
+        "ext-soap": "*",
+        "illuminate/support": "5.4.*",
+        "illuminate/contracts": "5.4.*",
+        "illuminate/auth": "5.4.*",
+        "illuminate/database": "5.4.*",
+        "xjtuana/cas-proxy-client": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Xjtuana\\": "src/"
+        }
+    },
+    "repositories": [
+        {"type": "composer", "url": "https://repo.packagist.com/xjtuana/"},
+        {"packagist.org": false}
+    ]
+}
