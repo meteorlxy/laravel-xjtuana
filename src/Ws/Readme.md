@@ -46,7 +46,12 @@ XJTUANA_WS_SMS_USER=
 XJTUANA_WS_SMS_PWD=
 ```
 
-3. 使用示例：
+### 3. 使用
+
+通过上述注册的 Facade 进行使用
+
+示例代码：
+
 ```php
 try {
     if ( empty($userinfo = \WsUserInfo::getByNetid($netid)) ) {
