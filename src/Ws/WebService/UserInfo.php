@@ -132,7 +132,7 @@ class UserInfo {
         try {
             $result = $this->soap->getInfoByName([
                 'auth'  => $this->auth,
-                'sname' => $netid
+                'sname' => $name
             ]);
         } catch (SoapFault $e) {
             throw $e;
