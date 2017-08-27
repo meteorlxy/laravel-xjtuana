@@ -1,6 +1,6 @@
 <?php 
 
-namespace Xjtuana\Cas\Facades;
+namespace Xjtuana\Ws\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
