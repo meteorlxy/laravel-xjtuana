@@ -1,7 +1,7 @@
 {
     "name": "xjtuana/laravel-webservice",
     "description": "XJTUANA webservice package for Laravel",
-    "keywords": ["xjtu", "xjtuana", "laravel", "soap"],
+    "keywords": ["xjtuana", "laravel", "soap", "webservice"],
     "license": "MIT",
     "authors": [
         {
@@ -10,12 +10,16 @@
         }
     ],
     "require": {
-        "ext-soap": "*",
-        "illuminate/support": "5.4.*"
+        "illuminate/support": "5.4.*",
+        "xjtuana/xjtu-webservice": "^1.0"
     },
     "autoload": {
         "psr-4": {
             "Xjtuana\\Ws\\": ""
         }
-    }
+    },
+    "repositories": [
+        {"type": "composer", "url": "https://repo.packagist.com/xjtuana/"},
+        {"packagist.org": false}
+    ]
 }
