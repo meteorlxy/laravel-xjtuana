@@ -26,7 +26,7 @@ Authors:
 
 ### 1. 通过Composer引入
 
-** 需要配置[Private Packagist](https://packagist.com/orgs/xjtuana) **
+**需要配置[Private Packagist](https://packagist.com/orgs/xjtuana)**
 
 ```
 composer require xjtuana/laravel-xjtuana ~1.0
@@ -78,5 +78,5 @@ XJTUANA_WS_SMS_PWD=
 
 ### 4. 具体模块配置和使用
 
-- [CAS模块](.src/Cas/Readme.md)
-- [Ws模块](.src/Ws/Readme.md)
+- [CAS模块](./src/Cas/Readme.md)
+- [Ws模块](./src/Ws/Readme.md)
