@@ -24,15 +24,6 @@
             "Xjtuana\\": "src/"
         }
     },
-    "repositories": [
-        {
-            "type": "composer", 
-            "url": "https://repo.packagist.com/xjtuana/"
-        },
-        {
-            "packagist.org": false
-        }
-    ],
     "extra": {
         "branch-alias": {
             "dev-master": "v1.x-dev"

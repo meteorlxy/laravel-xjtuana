@@ -24,9 +24,7 @@ Authors:
 
 ## Usgae 使用方法
 
-### 1. 通过Composer引入
-
-**需要配置[Private Packagist](https://packagist.com/orgs/xjtuana)**
+### 1. 通过Composer引入（[Packagist](https://packagist.org/packages/xjtuana/laravel-xjtuana)）
 
 ```
 composer require xjtuana/laravel-xjtuana ~1.0
