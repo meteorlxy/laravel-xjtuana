@@ -11,15 +11,11 @@
     ],
     "require": {
         "illuminate/support": "5.4.*",
-        "xjtuana/xjtu-webservice": "^1.0"
+        "xjtuana/xjtu-webservice": "^1.0.1"
     },
     "autoload": {
         "psr-4": {
-            "Xjtuana\\Ws\\": ""
+            "Xjtuana\\XjtuWs\\": ""
         }
-    },
-    "repositories": [
-        {"type": "composer", "url": "https://repo.packagist.com/xjtuana/"},
-        {"packagist.org": false}
-    ]
+    }
 }

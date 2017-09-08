@@ -1,10 +1,10 @@
 <?php 
 
-namespace Xjtuana\Ws\Facades;
+namespace Xjtuana\XjtuWs\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
-class XjtuanaWsSms extends Facade {
+class XjtuWsUserPhoto extends Facade {
 
 	/**
 	 * Get the registered name of the component.
@@ -12,7 +12,7 @@ class XjtuanaWsSms extends Facade {
 	 * @return string
 	 */
 	protected static function getFacadeAccessor() { 
-	    return 'xjtuana.ws.sms'; 
+	    return 'xjtuana.ws.userphoto'; 
 	}
 
 }

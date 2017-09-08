@@ -15,15 +15,15 @@
 在`config/app.php`的`providers`下，加入：
 
 ```php
-Xjtuana\Ws\XjtuanaWsServiceProvider::class,
+Xjtuana\XjtuWs\XjtuWsServiceProvider::class,
 ```
 
 在`config/app.php`的`aliases`下，加入：
 
 ```php
-'WsUserInfo' => Xjtuana\Ws\Facades\XjtuanaWsUserInfo::class,
-'WsUserPhoto' => Xjtuana\Ws\Facades\XjtuanaWsUserPhoto::class,
-'WsSms' => Xjtuana\Ws\Facades\XjtuanaWsSms::class,
+'WsUserInfo' => Xjtuana\XjtuWs\Facades\XjtuWsUserInfo::class,
+'WsUserPhoto' => Xjtuana\XjtuWs\Facades\XjtuWsUserPhoto::class,
+'WsSms' => Xjtuana\XjtuWs\Facades\XjtuWsSms::class,
 ```
 
 ### 2. 配置
@@ -31,7 +31,7 @@ Xjtuana\Ws\XjtuanaWsServiceProvider::class,
 运行以下命令生成配置文件
 
 ```shell
-php artisan vendor:publish --provider="Xjtuana\Ws\XjtuanaWsServiceProvider"
+php artisan vendor:publish --provider="Xjtuana\XjtuWs\XjtuWsServiceProvider"
 ```
 
 根据需要，在`.env`文件中配置相应变量

@@ -1,17 +1,17 @@
 <?php
 
-namespace Xjtuana\Ws;
+namespace Xjtuana\XjtuWs;
 
 use Illuminate\Support\ServiceProvider;
 
 /**
- * Class XjtuanaWsServiceProvider.
+ * Class XjtuWsServiceProvider.
  * 为Laravel提供WebService相关服务
  *
  * @author meteorlxy <meteor.lxy@foxmail.com>
  *
  */
-class XjtuanaWsServiceProvider extends ServiceProvider {
+class XjtuWsServiceProvider extends ServiceProvider {
 
     /**
 	 * Bootstrap the application.
@@ -33,15 +33,15 @@ class XjtuanaWsServiceProvider extends ServiceProvider {
 	public function register()
 	{
 			$this->app->singleton('xjtuana.ws.userinfo', function($app) {
-				 return new \Xjtu\Ws\WebService\WsUserInfo($app->config['xjtuana.ws.userinfo']);
+				 return new \Xjtu\XjtuWs\WebService\WsUserInfo($app->config['xjtuana.ws.userinfo']);
 			});
 	
 	    $this->app->singleton('xjtuana.ws.userphoto', function($app) {
-				 return new \Xjtu\Ws\WebService\WsUserPhoto($app->config['xjtuana.ws.userphoto']);
+				 return new \Xjtu\XjtuWs\WebService\WsUserPhoto($app->config['xjtuana.ws.userphoto']);
 			});
 	
 	    $this->app->singleton('xjtuana.ws.sms', function($app) {
-				 return new \Xjtu\Ws\WebService\WsSms($app->config['xjtuana.ws.sms']);
+				 return new \Xjtu\XjtuWs\WebService\WsSms($app->config['xjtuana.ws.sms']);
 			});
 	}
 
