@@ -50,15 +50,19 @@ class XjtuanaServiceProvider extends ServiceProvider {
 			});
 			
 			$this->app->singleton('xjtuana.ws.userinfo', function($app) {
-				 return new \Xjtuana\Ws\WebService\WsUserInfo($app->config['xjtuana.ws.userinfo']);
+				 return new \Xjtuana\XjtuWs\WebService\WsUserInfo($app->config['xjtuana.ws.userinfo']);
 			});
 	
 	    $this->app->singleton('xjtuana.ws.userphoto', function($app) {
-				 return new \Xjtuana\Ws\WebService\WsUserPhoto($app->config['xjtuana.ws.userphoto']);
+				 return new \Xjtuana\XjtuWs\WebService\WsUserPhoto($app->config['xjtuana.ws.userphoto']);
 			});
 	
 	    $this->app->singleton('xjtuana.ws.sms', function($app) {
-				 return new \Xjtuana\Ws\WebService\WsSms($app->config['xjtuana.ws.sms']);
+				 return new \Xjtuana\XjtuWs\WebService\WsSms($app->config['xjtuana.ws.sms']);
+			});
+			
+			$this->app->singleton('xjtuana.api.pppoelog', function($app) {
+				 return new \Xjtuana\XjtuApi\Api\ApiPppoeLog($app->config['xjtuana.api.pppoelog']);
 			});
 	}
 
@@ -74,6 +78,7 @@ class XjtuanaServiceProvider extends ServiceProvider {
 					'xjtuana.ws.userinfo',
 					'xjtuana.ws.userphoto',
 					'xjtuana.ws.sms',
+					'xjtuana.api.pppoelog',
 			];
 	}
 }

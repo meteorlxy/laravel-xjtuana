@@ -20,6 +20,12 @@ Authors:
 - 目前支持：查询用户信息、查询用户照片、发送短信
 - 需要向网络信息中心申请使用权限
 
+### API模块
+
+- 快速使用学校的相应API
+- 目前支持：查询用户PPPOE日志
+- 需要向网络信息中心申请使用权限
+
 
 
 ## Usgae 使用方法
@@ -44,9 +50,10 @@ Xjtuana\XjtuanaServiceProvider::class,
 
 ```php
 'CasProxy' => Xjtuana\Cas\Facades\XjtuanaCasProxy::class,
-'WsUserInfo' => Xjtuana\Ws\Facades\XjtuanaWsUserInfo::class,
-'WsUserPhoto' => Xjtuana\Ws\Facades\XjtuanaWsUserPhoto::class,
-'WsSms' => Xjtuana\Ws\Facades\XjtuanaWsSms::class,
+'WsUserInfo' => Xjtuana\XjtuWs\Facades\XjtuWsUserInfo::class,
+'WsUserPhoto' => Xjtuana\XjtuWs\Facades\XjtuWsUserPhoto::class,
+'WsSms' => Xjtuana\XjtuWs\Facades\XjtuWsSms::class,
+'ApiPppoeLog' => Xjtuana\XjtuApi\Facades\XjtuApiPppoeLog::class,
 ```
 
 ### 3. 配置
@@ -72,9 +79,12 @@ XJTUANA_WS_USERPHOTO_AUTH=
 XJTUANA_WS_SMS_URL=
 XJTUANA_WS_SMS_USER=
 XJTUANA_WS_SMS_PWD=
+
+XJTUANA_API_PPPOELOG_URL=
 ```
 
 ### 4. 具体模块配置和使用
 
 - [CAS模块](./src/Cas/Readme.md)
-- [Ws模块](./src/Ws/Readme.md)
+- [Ws模块](./src/XjtuWs/Readme.md)
+- [Api模块](./src/XjtuApi/Readme.md)
