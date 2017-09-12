@@ -10,7 +10,7 @@
         }
     ],
     "require": {
-        "illuminate/support": "5.4.*",
+        "illuminate/support": "5.4.*|5.5.*",
         "xjtuana/xjtu-api": "^1.0"
     },
     "autoload": {
