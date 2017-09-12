@@ -33,15 +33,15 @@ class XjtuWsServiceProvider extends ServiceProvider {
 	public function register()
 	{
 			$this->app->singleton('xjtuana.ws.userinfo', function($app) {
-				 return new \Xjtu\XjtuWs\WebService\WsUserInfo($app->config['xjtuana.ws.userinfo']);
+				 return new \Xjtuana\XjtuWs\WebService\WsUserInfo($app->config['xjtuana.ws.userinfo']);
 			});
 	
 	    $this->app->singleton('xjtuana.ws.userphoto', function($app) {
-				 return new \Xjtu\XjtuWs\WebService\WsUserPhoto($app->config['xjtuana.ws.userphoto']);
+				 return new \Xjtuana\XjtuWs\WebService\WsUserPhoto($app->config['xjtuana.ws.userphoto']);
 			});
 	
 	    $this->app->singleton('xjtuana.ws.sms', function($app) {
-				 return new \Xjtu\XjtuWs\WebService\WsSms($app->config['xjtuana.ws.sms']);
+				 return new \Xjtuana\XjtuWs\WebService\WsSms($app->config['xjtuana.ws.sms']);
 			});
 	}
 

@@ -33,7 +33,7 @@ class XjtuApiServiceProvider extends ServiceProvider {
 	public function register()
 	{
 			$this->app->singleton('xjtuana.api.pppoelog', function($app) {
-				 return new \Xjtu\XjtuApi\Api\ApiPppoeLog($app->config['xjtuana.api.pppoelog']);
+				 return new \Xjtuana\XjtuApi\Api\ApiPppoeLog($app->config['xjtuana.api.pppoelog']);
 			});
 	}
 
