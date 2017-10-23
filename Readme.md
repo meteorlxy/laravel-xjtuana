@@ -54,6 +54,7 @@ Xjtuana\XjtuanaServiceProvider::class,
 'WsUserPhoto' => Xjtuana\XjtuWs\Facades\XjtuWsUserPhoto::class,
 'WsSms' => Xjtuana\XjtuWs\Facades\XjtuWsSms::class,
 'ApiPppoeLog' => Xjtuana\XjtuApi\Facades\XjtuApiPppoeLog::class,
+'ApiSms' => Xjtuana\XjtuApi\Facades\ApiSms::class,
 ```
 
 ### 3. 配置
@@ -81,6 +82,10 @@ XJTUANA_WS_SMS_USER=
 XJTUANA_WS_SMS_PWD=
 
 XJTUANA_API_PPPOELOG_URL=
+XJTUANA_API_SMS_URL=
+XJTUANA_API_SMS_ACCOUNT_ID=
+XJTUANA_API_SMS_ACCOUNT_KEY=
+XJTUANA_API_SMS_CHANNEL_ID=
 ```
 
 ### 4. 具体模块配置和使用
