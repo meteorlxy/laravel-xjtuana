@@ -4,7 +4,7 @@
 
 为方便使用学校提供的API而开发。
 
-目前支持：查询用户PPPOE日志。
+目前支持：查询用户PPPOE日志、统一消息协作平台（短信接口）。
 
 想要使用这些接口，需要自行向网络中心申请使用权。
 
@@ -22,6 +22,7 @@ Xjtuana\XjtuApi\XjtuApiServiceProvider::class,
 
 ```php
 'PppoeLog' => Xjtuana\XjtuApi\Facades\XjtuApiPppoeLog::class,
+'Sms' => Xjtuana\XjtuApi\Facades\XjtuApiSms::class,
 ```
 
 ### 2. 配置
@@ -36,6 +37,11 @@ php artisan vendor:publish --provider="Xjtuana\XjtuWs\XjtuApiServiceProvider"
 
 ```ini
 XJTUANA_API_PPPOELOG_URL=
+
+XJTUANA_API_SMS_URL=
+XJTUANA_API_SMS_ACCOUNT_ID=
+XJTUANA_API_SMS_ACCOUNT_KEY=
+XJTUANA_API_SMS_CHANNEL_ID=
 ```
 
 ### 3. 使用
@@ -47,4 +53,10 @@ XJTUANA_API_PPPOELOG_URL=
 ```php
 $pppoelog = \PppoeLog::getByUsername($username);
 dd($pppoelog);
+
+$sms = \Sms::getChannels();
+dd($sms);
+
+$sms = \Sms::send(['18888888888'], 'sms content');
+dd($sms);
 ```
