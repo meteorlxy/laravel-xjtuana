@@ -23,7 +23,11 @@ return [
          */
         'userinfo' => [
             'url'  => env('XJTUANA_WS_USERINFO_URL', null),
-            'auth' => env('XJTUANA_WS_USERINFO_AUTH', null),
+            'config' => [
+                'auth' => env('XJTUANA_WS_USERINFO_AUTH', null),
+            ],
+            'options' => [
+            ],
         ],
 
         /**
@@ -31,7 +35,11 @@ return [
          */
         'userphoto' => [
             'url'  => env('XJTUANA_WS_USERPHOTO_URL', null),
-            'auth' => env('XJTUANA_WS_USERPHOTO_AUTH', null),
+            'config' => [
+                'auth' => env('XJTUANA_WS_USERPHOTO_AUTH', null),
+            ],
+            'options' => [
+            ],
         ],
 
         /**
@@ -39,8 +47,12 @@ return [
          */
         'sms' => [
             'url'  => env('XJTUANA_WS_SMS_URL', null),
-            'usr'  => env('XJTUANA_WS_SMS_USER', null),
-            'pwd'  => env('XJTUANA_WS_SMS_PWD', null),
+            'config' => [
+                'usr'  => env('XJTUANA_WS_SMS_USER', null),
+                'pwd'  => env('XJTUANA_WS_SMS_PWD', null),
+            ],
+            'options' => [
+            ],
         ]
 
     ],

@@ -10,28 +10,7 @@
 
 ## 使用方法
 
-### 1. 注册ServiceProvider & Facade
-
-在`config/app.php`的`providers`下，加入：
-
-```php
-Xjtuana\XjtuApi\XjtuApiServiceProvider::class,
-```
-
-在`config/app.php`的`aliases`下，加入：
-
-```php
-'PppoeLog' => Xjtuana\XjtuApi\Facades\XjtuApiPppoeLog::class,
-'Sms' => Xjtuana\XjtuApi\Facades\XjtuApiSms::class,
-```
-
-### 2. 配置
-
-运行以下命令生成配置文件
-
-```shell
-php artisan vendor:publish --provider="Xjtuana\XjtuWs\XjtuApiServiceProvider"
-```
+### 1. 配置
 
 根据需要，在`.env`文件中配置相应变量
 
@@ -44,9 +23,7 @@ XJTUANA_API_SMS_ACCOUNT_KEY=
 XJTUANA_API_SMS_CHANNEL_ID=
 ```
 
-### 3. 使用
-
-通过上述注册的 Facade 进行使用
+通过注册的 Facade 进行使用
 
 示例代码：
 

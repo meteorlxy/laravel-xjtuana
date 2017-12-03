@@ -39,6 +39,7 @@ class XjtuanaServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{
+			// CAS Proxy
 			$this->app->singleton('xjtuana.cas.proxy', function($app) {
 					$config = $app->config['xjtuana.cas.proxy'];
 					switch($config['version']) {
@@ -49,24 +50,29 @@ class XjtuanaServiceProvider extends ServiceProvider {
 					return new $client($config);
 			});
 			
+			// Webservice
 			$this->app->singleton('xjtuana.ws.userinfo', function($app) {
-				 return new \Xjtuana\XjtuWs\WebService\WsUserInfo($app->config['xjtuana.ws.userinfo']);
+					$config = $app->config['xjtuana.ws.userinfo'];
+					return new \Xjtuana\XjtuWs\WebService\WsUserInfo($config['url'], $config['config'], $config['options']);
 			});
 	
 	    $this->app->singleton('xjtuana.ws.userphoto', function($app) {
-				 return new \Xjtuana\XjtuWs\WebService\WsUserPhoto($app->config['xjtuana.ws.userphoto']);
+					$config = $app->config['xjtuana.ws.userphoto'];
+					return new \Xjtuana\XjtuWs\WebService\WsUserPhoto($config['url'], $config['config'], $config['options']);
 			});
 	
 	    $this->app->singleton('xjtuana.ws.sms', function($app) {
-				 return new \Xjtuana\XjtuWs\WebService\WsSms($app->config['xjtuana.ws.sms']);
+					$config = $app->config['xjtuana.ws.sms'];
+					return new \Xjtuana\XjtuWs\WebService\WsSms($config['url'], $config['config'], $config['options']);
 			});
 			
+			// API
 			$this->app->singleton('xjtuana.api.pppoelog', function($app) {
-				 return new \Xjtuana\XjtuApi\Api\ApiPppoeLog($app->config['xjtuana.api.pppoelog']);
+					return new \Xjtuana\XjtuApi\Api\ApiPppoeLog($app->config['xjtuana.api.pppoelog']);
 			});
 			
 			$this->app->singleton('xjtuana.api.sms', function($app) {
-				 return new \Xjtuana\XjtuApi\Api\ApiSms($app->config['xjtuana.api.sms']);
+					return new \Xjtuana\XjtuApi\Api\ApiSms($app->config['xjtuana.api.sms']);
 			});
 	}
 
@@ -83,6 +89,7 @@ class XjtuanaServiceProvider extends ServiceProvider {
 					'xjtuana.ws.userphoto',
 					'xjtuana.ws.sms',
 					'xjtuana.api.pppoelog',
+					'xjtuana.api.sms',
 			];
 	}
 }

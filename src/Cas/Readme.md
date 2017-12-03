@@ -10,29 +10,7 @@
 
 ## 使用方法
 
-### 1. 注册ServiceProvider & Facade
-
-在`config/app.php`的`providers`下，加入：
-
-```php
-Xjtuana\Cas\XjtuanaCasServiceProvider::class,
-```
-
-在`config/app.php`的`aliases`下，加入：
-
-```php
-'CasProxy' => Xjtuana\Cas\Facades\XjtuanaCasProxy::class,
-```
-
-### 2. 配置
-
-运行以下命令生成配置文件
-
-```shell
-php artisan vendor:publish --provider="Xjtuana\Cas\XjtuanaCasServiceProvider"
-```
-
-根据需要，在`.env`文件中配置相应变量
+1. 根据需要，在`.env`文件中配置相应变量
 
 ```ini
 XJTUANA_CAS_PROXY_PROTOCOL=
@@ -41,7 +19,7 @@ XJTUANA_CAS_PROXY_PREFIX=
 XJTUANA_CAS_PROXY_VERSION=
 ```
 
-2. 注册`CasUserProvider`
+2. 使用CasUserProvider
 
 在`app/Providers/AuthServiceProvider.php`中的`boot()`下，加入：
 ```php
