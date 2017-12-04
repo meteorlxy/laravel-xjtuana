@@ -68,11 +68,13 @@ class XjtuanaServiceProvider extends ServiceProvider {
 			
 			// API
 			$this->app->singleton('xjtuana.api.pppoelog', function($app) {
-					return new \Xjtuana\XjtuApi\Api\ApiPppoeLog($app->config['xjtuana.api.pppoelog']);
+					$config = $app->config['xjtuana.api.pppoelog'];
+					return new \Xjtuana\XjtuApi\Api\ApiPppoeLog($config['url'], $config['config'], $config['options']);
 			});
 			
 			$this->app->singleton('xjtuana.api.sms', function($app) {
-					return new \Xjtuana\XjtuApi\Api\ApiSms($app->config['xjtuana.api.sms']);
+					$config = $app->config['xjtuana.api.sms'];
+					return new \Xjtuana\XjtuApi\Api\ApiSms($config['url'], $config['config'], $config['options']);
 			});
 	}
 

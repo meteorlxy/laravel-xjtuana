@@ -33,7 +33,7 @@ Authors:
 ### 1. 通过Composer引入（[Packagist](https://packagist.org/packages/xjtuana/laravel-xjtuana)）
 
 ```
-composer require xjtuana/laravel-xjtuana ~1.0
+composer require xjtuana/laravel-xjtuana ~1.2.1
 ```
 
 ### 2. 注册ServiceProvider & Facade
