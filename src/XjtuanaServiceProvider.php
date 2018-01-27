@@ -78,16 +78,23 @@ class XjtuanaServiceProvider extends ServiceProvider {
 			});
 			
 			// HealthCheck
+			$this->app->singleton('xjtuana.healthcheck.cache', function($app) {
+					return new \Xjtuana\HealthCheck\LaravelCache();
+			});
+			
 			$this->app->singleton('xjtuana.healthcheck.jetbrains', function($app) {
-					return new \Xjtuana\HealthCheck\CheckJetbrains();
+					$check = new \Xjtuana\HealthCheck\CheckJetbrains();
+					return $check->useCache($app->make('xjtuana.healthcheck.cache'));
 			});
 			
 			$this->app->singleton('xjtuana.healthcheck.kms', function($app) {
-					return new \Xjtuana\HealthCheck\CheckKms();
+					$check = new \Xjtuana\HealthCheck\CheckKms();
+					return $check->useCache($app->make('xjtuana.healthcheck.cache'));
 			});
 			
 			$this->app->singleton('xjtuana.healthcheck.shadowsocks', function($app) {
-					return new \Xjtuana\HealthCheck\CheckShadowsocks();
+					$check = new \Xjtuana\HealthCheck\CheckShadowsocks();
+					return $check->useCache($app->make('xjtuana.healthcheck.cache'));
 			});
 	}
 
