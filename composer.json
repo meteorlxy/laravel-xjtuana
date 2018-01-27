@@ -18,7 +18,8 @@
         "illuminate/database": "5.4.*|5.5.*",
         "xjtuana/cas-proxy-client": "^1.0",
         "xjtuana/xjtu-webservice": "^1.1.0",
-        "xjtuana/xjtu-api": "^1.2.0"
+        "xjtuana/xjtu-api": "^1.2.0",
+        "xjtuana/healthcheck": "^0.0.1"
     },
     "autoload": {
         "psr-4": {

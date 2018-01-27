@@ -76,6 +76,19 @@ class XjtuanaServiceProvider extends ServiceProvider {
 					$config = $app->config['xjtuana.api.sms'];
 					return new \Xjtuana\XjtuApi\Api\ApiSms($config['url'], $config['config'], $config['options']);
 			});
+			
+			// HealthCheck
+			$this->app->singleton('xjtuana.healthcheck.jetbrains', function($app) {
+					return new \Xjtuana\HealthCheck\CheckJetbrains();
+			});
+			
+			$this->app->singleton('xjtuana.healthcheck.kms', function($app) {
+					return new \Xjtuana\HealthCheck\CheckKms();
+			});
+			
+			$this->app->singleton('xjtuana.healthcheck.shadowsocks', function($app) {
+					return new \Xjtuana\HealthCheck\CheckShadowsocks();
+			});
 	}
 
 	/**
@@ -92,6 +105,9 @@ class XjtuanaServiceProvider extends ServiceProvider {
 					'xjtuana.ws.sms',
 					'xjtuana.api.pppoelog',
 					'xjtuana.api.sms',
+					'xjtuana.healthcheck.jetbrains',
+					'xjtuana.healthcheck.kms',
+					'xjtuana.healthcheck.shadowsocks',
 			];
 	}
 }

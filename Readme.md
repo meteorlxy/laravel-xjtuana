@@ -26,6 +26,11 @@ Authors:
 - 目前支持：查询用户PPPOE日志
 - 需要向网络信息中心申请使用权限
 
+### HealthCheck模块
+
+- 快速使用社团福利健康检测
+- 目前支持：KMS, Jetbrains, SS
+
 
 
 ## Usgae 使用方法
@@ -55,6 +60,9 @@ Xjtuana\XjtuanaServiceProvider::class,
 'WsSms' => Xjtuana\XjtuWs\Facades\XjtuWsSms::class,
 'ApiPppoeLog' => Xjtuana\XjtuApi\Facades\XjtuApiPppoeLog::class,
 'ApiSms' => Xjtuana\XjtuApi\Facades\ApiSms::class,
+'CheckJetbrains' => Xjtuana\HealthCheck\Facades\CheckJetbrains::class,
+'CheckKms' => Xjtuana\HealthCheck\Facades\CheckKms::class,
+'CheckShadowsocks' => Xjtuana\HealthCheck\Facades\CheckShadowsocks::class,
 ```
 
 ### 3. 配置
