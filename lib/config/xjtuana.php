@@ -62,8 +62,8 @@ return [
      */
     
     'api' => [
-        'pppoelog' => [
-            'url' => env('XJTUANA_API_PPPOELOG_URL', null),
+        'networklog' => [
+            'url' => env('XJTUANA_API_NETWORKLOG_URL', null),
             'config' => [
             ],
             'options' => [

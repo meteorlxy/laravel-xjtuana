@@ -4,7 +4,7 @@ namespace Xjtuana\XjtuApi\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
-class XjtuApiPppoeLog extends Facade {
+class XjtuApiNetworkLog extends Facade {
 
 	/**
 	 * Get the registered name of the component.
@@ -12,7 +12,7 @@ class XjtuApiPppoeLog extends Facade {
 	 * @return string
 	 */
 	protected static function getFacadeAccessor() { 
-	    return 'xjtuana.api.pppoelog'; 
+	    return 'xjtuana.api.networklog'; 
 	}
 
 }

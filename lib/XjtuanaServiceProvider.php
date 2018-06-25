@@ -67,9 +67,9 @@ class XjtuanaServiceProvider extends ServiceProvider {
 			});
 			
 			// API
-			$this->app->singleton('xjtuana.api.pppoelog', function($app) {
-					$config = $app->config['xjtuana.api.pppoelog'];
-					return new \Xjtuana\XjtuApi\Api\ApiPppoeLog($config['url'], $config['config'], $config['options']);
+			$this->app->singleton('xjtuana.api.networklog', function($app) {
+					$config = $app->config['xjtuana.api.networklog'];
+					return new \Xjtuana\XjtuApi\Api\ApiNetworkLog($config['url'], $config['config'], $config['options']);
 			});
 			
 			$this->app->singleton('xjtuana.api.sms', function($app) {
@@ -110,7 +110,7 @@ class XjtuanaServiceProvider extends ServiceProvider {
 					'xjtuana.ws.userinfo',
 					'xjtuana.ws.userphoto',
 					'xjtuana.ws.sms',
-					'xjtuana.api.pppoelog',
+					'xjtuana.api.networklog',
 					'xjtuana.api.sms',
 					'xjtuana.healthcheck.jetbrains',
 					'xjtuana.healthcheck.kms',

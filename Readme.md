@@ -23,7 +23,7 @@ Authors:
 ### API模块
 
 - 快速使用学校的相应API
-- 目前支持：查询用户PPPOE日志
+- 目前支持：查询用户Network日志
 - 需要向网络信息中心申请使用权限
 
 ### HealthCheck模块
@@ -38,7 +38,7 @@ Authors:
 ### 1. 通过Composer引入（[Packagist](https://packagist.org/packages/xjtuana/laravel-xjtuana)）
 
 ```
-composer require xjtuana/laravel-xjtuana ~1.2.1
+composer require xjtuana/laravel-xjtuana ~2.0.0
 ```
 
 ### 2. 注册ServiceProvider & Facade
@@ -58,7 +58,7 @@ Xjtuana\XjtuanaServiceProvider::class,
 'WsUserInfo' => Xjtuana\XjtuWs\Facades\XjtuWsUserInfo::class,
 'WsUserPhoto' => Xjtuana\XjtuWs\Facades\XjtuWsUserPhoto::class,
 'WsSms' => Xjtuana\XjtuWs\Facades\XjtuWsSms::class,
-'ApiPppoeLog' => Xjtuana\XjtuApi\Facades\XjtuApiPppoeLog::class,
+'ApiNetworkLog' => Xjtuana\XjtuApi\Facades\XjtuApiNetworkLog::class,
 'ApiSms' => Xjtuana\XjtuApi\Facades\ApiSms::class,
 'CheckJetbrains' => Xjtuana\HealthCheck\Facades\CheckJetbrains::class,
 'CheckKms' => Xjtuana\HealthCheck\Facades\CheckKms::class,
@@ -89,7 +89,7 @@ XJTUANA_WS_SMS_URL=
 XJTUANA_WS_SMS_USER=
 XJTUANA_WS_SMS_PWD=
 
-XJTUANA_API_PPPOELOG_URL=
+XJTUANA_API_NETWORKLOG_URL=
 XJTUANA_API_SMS_URL=
 XJTUANA_API_SMS_ACCOUNT_ID=
 XJTUANA_API_SMS_ACCOUNT_KEY=

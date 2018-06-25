@@ -12,18 +12,18 @@
         }
     ],
     "require": {
-        "illuminate/support": "5.4.*|5.5.*",
-        "illuminate/contracts": "5.4.*|5.5.*",
-        "illuminate/auth": "5.4.*|5.5.*",
-        "illuminate/database": "5.4.*|5.5.*",
+        "illuminate/support": "^5.4",
+        "illuminate/contracts": "^5.4",
+        "illuminate/auth": "^5.4",
+        "illuminate/database": "^5.4",
         "xjtuana/cas-proxy-client": "^1.0",
         "xjtuana/xjtu-webservice": "^1.1.0",
-        "xjtuana/xjtu-api": "^1.2.0",
+        "xjtuana/xjtu-api": "^2.0.0",
         "xjtuana/healthcheck": "^0.1.0"
     },
     "autoload": {
         "psr-4": {
-            "Xjtuana\\": "src/"
+            "Xjtuana\\": "lib/"
         }
     },
     "extra": {
