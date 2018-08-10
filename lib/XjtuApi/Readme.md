@@ -28,10 +28,13 @@ XJTUANA_API_SMS_CHANNEL_ID=
 示例代码：
 
 ```php
-$networklog = \ApiNetworkLog::getStuByUsername($username);
+$networklog = \ApiNetworkLog::getStuPppoeByUsername($username);
 dd($networklog);
 
-$networklog = \ApiNetworkLog::getWenetByUsername($username);
+$networklog = \ApiNetworkLog::getStuWlanByUsername($username);
+dd($networklog);
+
+$networklog = \ApiNetworkLog::getWenetPppoeByUsername($username);
 dd($networklog);
 
 $sms = \ApiSms::getChannels();
